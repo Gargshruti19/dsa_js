@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Array Access</title>
+	</head>
+	<body>
+		<input
+			type="text"
+			id="input"
+			placeholder="Enter the position of an array to get that element "
+		/>
+    <button onclick="getElement()">Get Element</button>
+		<script>
+			let element = [1, 45, 32, 56, 774, 3366, 5, 434];
+
+			const getElement = () => {
+				let input = document.getElementById("input").value;
+
+				if (input < element.length && typeof parseInt(input) === "number") {
+					alert(element[input]);
+				} else {
+					alert("Please enter a Valid Input");
+				}
+			};
+		</script>
+	</body>
+</html>
